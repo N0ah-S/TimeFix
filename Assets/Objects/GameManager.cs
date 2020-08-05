@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour {
     [SerializeField]
     public static int state;
 
-    public Text help_text;
+    public Text help_text, state_indicator;
     List<ObjectOfInterest> list;
     PlayerScript player;
 
@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour {
     }
 
     void Update() {
+        if (Input.GetKeyDown(KeyCode.Escape)) activateFixMode();
+
         if (list.Count < 1) return;
         if(state == 1 && list.Count != 0 && Input.GetKeyDown(list[0].key)) {
             list[0].scan();
@@ -50,6 +52,7 @@ public class GameManager : MonoBehaviour {
 
     [ContextMenu("Go into Fix Mode")]
     public void activateFixMode() {
+        state_indicator.text = "Fix Mode";
         state = 2;
     }
 
