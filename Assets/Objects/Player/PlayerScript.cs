@@ -8,6 +8,7 @@ public class PlayerScript : MonoBehaviour {
     public SpriteRenderer spriteRenderer;
     public Animator animator;
     public float speed = 2f;
+    public bool ladder = false;
 
     public Image inventoryDisplay;
     Item inventory;
@@ -17,19 +18,26 @@ public class PlayerScript : MonoBehaviour {
     }
 
     void Update() {
-        if (Input.GetKey(KeyCode.D)) {
-            if (animator.GetCurrentAnimatorStateInfo(0).IsName("idle"))
-                animator.Play("walk");
-            gameObject.transform.Translate(Time.deltaTime * speed, 0, 0);
-            spriteRenderer.flipX = false;
-        } else if (Input.GetKey(KeyCode.A)) {
-            if (animator.GetCurrentAnimatorStateInfo(0).IsName("idle"))
-                animator.Play("walk");
-            gameObject.transform.Translate(-Time.deltaTime * speed, 0, 0);
-            spriteRenderer.flipX = true;
+        if (ladder) {
+            this.GetComponent<Rigidbody2D>().Sleep();
         } else {
-            if (animator.GetCurrentAnimatorStateInfo(0).IsName("walk"))
-                animator.Play("idle");
+            if (Input.GetKey(KeyCode.D)) {
+                if (animator.GetCurrentAnimatorStateInfo(0).IsName("idle"))
+                    animator.Play("walk");
+                this.GetComponent<Rigidbody2D>().velocity = new Vector3(speed, 0, 0);
+                //gameObject.transform.Translate(Time.deltaTime * speed, 0, 0);
+                spriteRenderer.flipX = false;
+            } else if (Input.GetKey(KeyCode.A)) {
+                if (animator.GetCurrentAnimatorStateInfo(0).IsName("idle"))
+                    animator.Play("walk");
+                this.GetComponent<Rigidbody2D>().velocity = new Vector3(-speed, 0, 0);
+                //gameObject.transform.Translate(-Time.deltaTime * speed, 0, 0);
+                spriteRenderer.flipX = true;
+            } else {
+                this.GetComponent<Rigidbody2D>().velocity = new Vector3(0, 0, 0);
+                if (animator.GetCurrentAnimatorStateInfo(0).IsName("walk"))
+                    animator.Play("idle");
+            }
         }
     }
 
@@ -50,6 +58,15 @@ public class PlayerScript : MonoBehaviour {
     public void removeItem() {
         inventoryDisplay.color = Color.clear;
         inventory = null;
+    }
+
+    public void Onladder(bool yes) {
+        this.ladder = yes;
+
+        if (yes) this.GetComponent<Rigidbody2D>().Sleep();
+        else this.GetComponent<Rigidbody2D>().WakeUp();
+
+        this.GetComponent<CapsuleCollider2D>().enabled = !yes;
     }
 
 }

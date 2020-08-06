@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Heinz
   - NPC
+  - agression
   layers:
   - Default
   - TransparentFX
@@ -51,4 +52,7 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 1044520767
+    locked: 0
+  - name: Menu
+    uniqueID: 1723196213
     locked: 0

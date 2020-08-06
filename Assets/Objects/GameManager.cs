@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,6 +11,8 @@ public class GameManager : MonoBehaviour {
 
     [SerializeField]
     public static int state;
+
+    public static float agression;
 
     public Text help_text, state_indicator;
     List<ObjectOfInterest> list;
@@ -58,21 +61,23 @@ public class GameManager : MonoBehaviour {
 
     public static void addActionToList(ObjectOfInterest objectOfInterest) {
         if (singelton.list.Count == 0) {
-            if (singelton.player.getItem() != null && !objectOfInterest.isActive()) setText("Press " + objectOfInterest.key.ToString() + " to place " + singelton.player.getItem().name);
-            else if (state == 1) setText("Press " + objectOfInterest.key.ToString() + " to scan " + objectOfInterest.getItemName());
-            //else if (objectOfInterest.item == null) setText("Press " + objectOfInterest.key.ToString() + " to take " + objectOfInterest.item.name);
-            else if (state == 2) setText("Press " + objectOfInterest.key.ToString() + " to take " + objectOfInterest.getItemName());
+            setActionText(objectOfInterest);
         }
 
         singelton.list.Add(objectOfInterest);
     }
 
     public static void removeAction(ObjectOfInterest objectOfInterest) {
-        int index = singelton.list.IndexOf(objectOfInterest);
-        if (index == 0) {
-            singelton.help_text.gameObject.SetActive(false);
+        if (singelton.list.Count > 0)
+        {
+            int index = singelton.list.IndexOf(objectOfInterest);
+            if (index == 0)
+            {
+                singelton.help_text.gameObject.SetActive(false);
+            }
+            if (index != -1) singelton.list.RemoveAt(index);
+            setActionText(singelton.list[0]);
         }
-        if(index != -1) singelton.list.RemoveAt(index);
     }
 
     public static void setText(string text) {
@@ -82,6 +87,24 @@ public class GameManager : MonoBehaviour {
 
     public static void removeText() {
         singelton.help_text.gameObject.SetActive(false);
+    }
+
+    public static void changeAgression(float amount)
+    {
+        agression += amount;
+        if(agression > 100)
+        {
+            agression = 100f;
+        }
+        GameObject.FindGameObjectWithTag("agression").transform.localScale = new Vector3(agression/100, 1, 0);
+    }
+
+    public static void setActionText(ObjectOfInterest objectOfInterest)
+    {
+        if (singelton.player.getItem() != null && !objectOfInterest.isActive()) setText("Press " + objectOfInterest.key.ToString() + " to place " + singelton.player.getItem().name);
+        else if (state == 1) setText("Press " + objectOfInterest.key.ToString() + " to scan " + objectOfInterest.getItemName());
+        //else if (objectOfInterest.item == null) setText("Press " + objectOfInterest.key.ToString() + " to take " + objectOfInterest.item.name);
+        else if (state == 2) setText("Press " + objectOfInterest.key.ToString() + " to take " + objectOfInterest.getItemName());
     }
 
 

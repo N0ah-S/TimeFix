@@ -7,19 +7,16 @@ public class ObjectOfInterest : MonoBehaviour {
 
     [SerializeField]
     bool scanable, useable, needsToBeTarget;
-    bool unlocked, active;
-    public TypeOfDeadly typeOfDeadly;
+    public bool unlocked, active;
 
     [SerializeField]
     public Item item;
 
     [SerializeField]
-    public GameObject redirect;
-
-    public GameObject action;
     public KeyCode key;
 
     private void Start() {
+        item.firstLinked = this.gameObject;
         active = true;
     }
 
@@ -36,7 +33,7 @@ public class ObjectOfInterest : MonoBehaviour {
                 }
             } else if (collision.gameObject.CompareTag("NPC") && (unlocked || !needsToBeTarget)) {
                 collision.gameObject.GetComponent<KIBehavior>().collision(this);
-                if (typeOfDeadly == TypeOfDeadly.EXPLOSIVE || typeOfDeadly == TypeOfDeadly.EVENT) action.SetActive(true);
+                if (item.typeOfDeadly == TypeOfDeadly.EXPLOSIVE || item.typeOfDeadly == TypeOfDeadly.EVENT) item.activate(this.gameObject);
             }
         } else {
             if (GameManager.state == 2 && useable) {
@@ -69,8 +66,8 @@ public class ObjectOfInterest : MonoBehaviour {
     public void interact(KIBehavior KI) {
         if (active) {
             unlocked = true;
-            if (typeOfDeadly == TypeOfDeadly.EXPLOSIVE || typeOfDeadly == TypeOfDeadly.EVENT) action.SetActive(true);
-            if (typeOfDeadly == TypeOfDeadly.POISONOUS) KI.collision(this);
+            if (item.typeOfDeadly == TypeOfDeadly.EXPLOSIVE || item.typeOfDeadly == TypeOfDeadly.EVENT) item.activate(this.gameObject);
+            if (item.typeOfDeadly == TypeOfDeadly.POISONOUS) KI.collision(this);
         }
     }
     public void activate() {
