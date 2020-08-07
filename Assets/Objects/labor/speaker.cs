@@ -12,7 +12,7 @@ public class speaker : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player")) {
+        if (collision.gameObject.CompareTag("Player") && !triggered) {
             GameObject.FindGameObjectWithTag("Heinz").GetComponent<TalkingHeinz>().readInfo(text);
             triggered = true;
         }

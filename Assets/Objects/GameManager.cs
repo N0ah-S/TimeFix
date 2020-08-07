@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour {
     [SerializeField]
     public static int state;
 
+    [SerializeField]
+    public List<GameObject> fixing, investigating;
+
     public static float agression;
 
     public Text help_text, state_indicator;
@@ -23,6 +26,14 @@ public class GameManager : MonoBehaviour {
         list = new List<ObjectOfInterest>();
         state = 1;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerScript>();
+        foreach (GameObject gameObject in fixing)
+        {
+            gameObject.SetActive(false);
+        }
+        foreach (GameObject gameObject in investigating)
+        {
+            gameObject.SetActive(true);
+        }
     }
 
     void Update() {
@@ -57,6 +68,14 @@ public class GameManager : MonoBehaviour {
     public void activateFixMode() {
         state_indicator.text = "Fix Mode";
         state = 2;
+        foreach(GameObject gameObject in fixing)
+        {
+            gameObject.SetActive(true);
+        }
+        foreach (GameObject gameObject in investigating)
+        {
+            gameObject.SetActive(false);
+        }
     }
 
     public static void addActionToList(ObjectOfInterest objectOfInterest) {

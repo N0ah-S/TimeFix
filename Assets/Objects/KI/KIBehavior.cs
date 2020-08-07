@@ -9,14 +9,20 @@ public class KIBehavior : MonoBehaviour {
 
     public SpriteRenderer spriteRenderer;
     public Animator animator;
+    public bool finished = false;
 
     [SerializeField]
-    public GameObject target;
+    public GameObject target, dead;
+
+    [SerializeField]
+    public GameObject happy, angry;
 
     public float speed = 1f;
     public bool ladder = false;
 
     public void Update() {
+        angry.SetActive(false);
+        happy.SetActive(finished);
         if (ladder){
 
         }else if(target != null){
@@ -50,15 +56,20 @@ public class KIBehavior : MonoBehaviour {
             if (entity.item.typeOfDeadly == TypeOfDeadly.EXPLOSIVE || entity.item.typeOfDeadly == TypeOfDeadly.POISONOUS)
             {
                 gameObject.SetActive(false);
+                dead.SetActive(true);
             }
             else if (entity.item.typeOfDeadly == TypeOfDeadly.REDIRECT)
             {
                 target = entity.GetComponent<ObjectOfInterest>().item.redirect;
+            }else if(entity.item.typeOfDeadly == TypeOfDeadly.None)
+            {
+                finished = true;
             }
         }
         else
         {
             GameManager.changeAgression(10 * Time.deltaTime);
+            angry.SetActive(true);
         }
     }
 
