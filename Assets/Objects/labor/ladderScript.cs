@@ -44,7 +44,20 @@ public class ladderScript : MonoBehaviour
                     UnityEngine.Debug.Log("leftLadder");
                     gameObject.GetComponent<PlayerScript>().Onladder(false);
                 }
+                else
+                {
+                    gameObject.GetComponent<KIBehavior>().Onladder(false);
+                    UnityEngine.Debug.Log("KI left ladder");
+                }
             }
         }
+    }
+
+    public void use(GameObject gameObject)
+    {
+        UnityEngine.Debug.Log("AddedKIToLadder");
+        gameObject.GetComponent<KIBehavior>().Onladder(true);
+        climbing.Add(gameObject);
+        direction.Add((int)Mathf.Sign(this.transform.position.y - gameObject.transform.position.y));
     }
 }

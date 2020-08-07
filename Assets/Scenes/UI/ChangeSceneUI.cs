@@ -11,4 +11,8 @@ public class ChangeSceneUI : MonoBehaviour {
         SceneManager.LoadSceneAsync(scene);
     }
 
+    public void exit() {
+        Application.Quit();
+    }
+
 }

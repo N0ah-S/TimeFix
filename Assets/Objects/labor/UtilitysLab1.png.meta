@@ -1,7 +1,127 @@
 fileFormatVersion: 2
 guid: 9a35f65e544072e4a89d91e262c14f62
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -256613326453145969
+    second: UtilitysLab1_0
+  - first:
+      213: -8324928867683858677
+    second: UtilitysLab1_1
+  - first:
+      213: 188720627454614826
+    second: UtilitysLab1_2
+  - first:
+      213: -1922348412488166348
+    second: UtilitysLab1_3
+  - first:
+      213: 2817240850378083012
+    second: UtilitysLab1_4
+  - first:
+      213: -8810395186725385196
+    second: UtilitysLab1_5
+  - first:
+      213: 3470223627927532106
+    second: UtilitysLab1_6
+  - first:
+      213: -6523962822008332568
+    second: UtilitysLab1_7
+  - first:
+      213: 3325919464957692264
+    second: UtilitysLab1_8
+  - first:
+      213: -795138691713891799
+    second: UtilitysLab1_9
+  - first:
+      213: 3798117188562094272
+    second: UtilitysLab1_10
+  - first:
+      213: 4951735213275135774
+    second: UtilitysLab1_11
+  - first:
+      213: -7727356740479942132
+    second: UtilitysLab1_12
+  - first:
+      213: 238380675605257872
+    second: UtilitysLab1_13
+  - first:
+      213: 4191299352106741432
+    second: UtilitysLab1_14
+  - first:
+      213: -3725887353155820304
+    second: UtilitysLab1_15
+  - first:
+      213: -580950392603215858
+    second: UtilitysLab1_16
+  - first:
+      213: -2499081546877183186
+    second: UtilitysLab1_0
+  - first:
+      213: -7803681200142299644
+    second: UtilitysLab1_1
+  - first:
+      213: 8963993859927343852
+    second: UtilitysLab1_2
+  - first:
+      213: -6548712602454524231
+    second: UtilitysLab1_3
+  - first:
+      213: -6270304785256835112
+    second: UtilitysLab1_4
+  - first:
+      213: -8427243274467414154
+    second: UtilitysLab1_5
+  - first:
+      213: -1565188721924698210
+    second: UtilitysLab1_6
+  - first:
+      213: 807884365112557874
+    second: UtilitysLab1_7
+  - first:
+      213: 4536940707273587261
+    second: UtilitysLab1_8
+  - first:
+      213: 3374180735850396715
+    second: UtilitysLab1_9
+  - first:
+      213: 732173084875417695
+    second: UtilitysLab1_10
+  - first:
+      213: -2428676730235408552
+    second: UtilitysLab1_11
+  - first:
+      213: 8459963121294130214
+    second: UtilitysLab1_12
+  - first:
+      213: 6379019347291757893
+    second: UtilitysLab1_13
+  - first:
+      213: -6974124642543952830
+    second: UtilitysLab1_14
+  - first:
+      213: 4273320821113014513
+    second: UtilitysLab1_15
+  - first:
+      213: 569417673097912392
+    second: UtilitysLab1_16
+  - first:
+      213: 1447988068939489406
+    second: UtilitysLab1_17
+  - first:
+      213: -5099157146812054765
+    second: UtilitysLab1_17
+  - first:
+      213: -1588738933912660320
+    second: UtilitysLab1_18
+  - first:
+      213: 5334616388835469190
+    second: UtilitysLab1_19
+  - first:
+      213: -4303772553802625551
+    second: UtilitysLab1_20
+  - first:
+      213: -9137485129085309250
+    second: UtilitysLab1_21
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +161,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +193,453 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: UtilitysLab1_0
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 617
+        width: 172
+        height: 296
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2bd6a5e29a715dd0800000000000000
+      internalID: -2499081546877183186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UtilitysLab1_1
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 762
+        width: 315
+        height: 211
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40ecf1d4b41c3b390800000000000000
+      internalID: -7803681200142299644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UtilitysLab1_2
+      rect:
+        serializedVersion: 2
+        x: 1766
+        y: 903
+        width: 61
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce280cd1ce0866c70800000000000000
+      internalID: 8963993859927343852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UtilitysLab1_3
+      rect:
+        serializedVersion: 2
+        x: 1623
+        y: 846
+        width: 62
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bef29aa59c4e15a0800000000000000
+      internalID: -6548712602454524231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UtilitysLab1_4
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 561
+        width: 193
+        height: 190
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d79551f4076bf8a0800000000000000
+      internalID: -6270304785256835112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UtilitysLab1_5
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 610
+        width: 157
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67fe19d24ea6c0b80800000000000000
+      internalID: -8427243274467414154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UtilitysLab1_6
+      rect:
+        serializedVersion: 2
+        x: 1109
+        y: 727
+        width: 16
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9f0b3f6625574ae0800000000000000
+      internalID: -1565188721924698210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UtilitysLab1_7
+      rect:
+        serializedVersion: 2
+        x: 1126
+        y: 697
+        width: 6
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 231402abc8e263b00800000000000000
+      internalID: 807884365112557874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UtilitysLab1_8
+      rect:
+        serializedVersion: 2
+        x: 1317
+        y: 621
+        width: 327
+        height: 105
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3a3d08198376fe30800000000000000
+      internalID: 4536940707273587261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UtilitysLab1_10
+      rect:
+        serializedVersion: 2
+        x: 1146
+        y: 622
+        width: 66
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f58e91e9a83392a00800000000000000
+      internalID: 732173084875417695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UtilitysLab1_11
+      rect:
+        serializedVersion: 2
+        x: 1225
+        y: 617
+        width: 61
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85faf0ca16b9b4ed0800000000000000
+      internalID: -2428676730235408552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UtilitysLab1_13
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 12
+        width: 115
+        height: 600
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54d5ba28c44d68850800000000000000
+      internalID: 6379019347291757893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UtilitysLab1_14
+      rect:
+        serializedVersion: 2
+        x: 1252
+        y: 399
+        width: 127
+        height: 95
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24c9edd869ee63f90800000000000000
+      internalID: -6974124642543952830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UtilitysLab1_15
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 400
+        width: 21
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f8c8b155a2ed4b30800000000000000
+      internalID: 4273320821113014513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UtilitysLab1_16
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 71
+        width: 232
+        height: 314
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 840a4d55b5af6e700800000000000000
+      internalID: 569417673097912392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UtilitysLab1_9
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 503
+        width: 206
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 922893d929917f4f0800000000000000
+      internalID: -795138691713891799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UtilitysLab1_17
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 190
+        width: 40
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3138f5a67972c39b0800000000000000
+      internalID: -5099157146812054765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UtilitysLab1_18
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 195
+        width: 570
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a69d4b6b5aa3f9e0800000000000000
+      internalID: -1588738933912660320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UtilitysLab1_19
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 35
+        width: 402
+        height: 268
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 687e385775d580a40800000000000000
+      internalID: 5334616388835469190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UtilitysLab1_20
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 36
+        width: 111
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fdc4882aade544c0800000000000000
+      internalID: -4303772553802625551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
