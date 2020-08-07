@@ -63,8 +63,13 @@ public class PlayerScript : MonoBehaviour {
     public void Onladder(bool yes) {
         this.ladder = yes;
 
-        if (yes) this.GetComponent<Rigidbody2D>().Sleep();
-        else this.GetComponent<Rigidbody2D>().WakeUp();
+        if (yes) {
+            this.GetComponent<Rigidbody2D>().Sleep();
+            animator.Play("climb");
+        } else {
+            this.GetComponent<Rigidbody2D>().IsAwake();
+            animator.Play("idle");
+        }
 
         this.GetComponent<CapsuleCollider2D>().enabled = !yes;
     }

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ladderScript : MonoBehaviour
 {
+    [SerializeField]
+    public GameObject redirect;
 
     List<GameObject> climbing;
     List<int> direction;
@@ -18,7 +20,7 @@ public class ladderScript : MonoBehaviour
     {
         if (climbing.IndexOf(collision.gameObject) == -1)
         {
-            if (Input.GetKey(KeyCode.W) && collision.gameObject.CompareTag("Player"))
+            if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S)) && collision.gameObject.CompareTag("Player"))
             {
                 climbing.Add(collision.gameObject);
                 direction.Add((int)Mathf.Sign(this.transform.position.y - collision.gameObject.transform.position.y));
@@ -46,7 +48,7 @@ public class ladderScript : MonoBehaviour
                 }
                 else
                 {
-                    gameObject.GetComponent<KIBehavior>().Onladder(false);
+                    gameObject.GetComponent<KIBehavior>().Onladder(false, this);
                     UnityEngine.Debug.Log("KI left ladder");
                 }
             }
@@ -56,7 +58,7 @@ public class ladderScript : MonoBehaviour
     public void use(GameObject gameObject)
     {
         UnityEngine.Debug.Log("AddedKIToLadder");
-        gameObject.GetComponent<KIBehavior>().Onladder(true);
+        gameObject.GetComponent<KIBehavior>().Onladder(true, this);
         climbing.Add(gameObject);
         direction.Add((int)Mathf.Sign(this.transform.position.y - gameObject.transform.position.y));
     }
